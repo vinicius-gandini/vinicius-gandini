@@ -14,4 +14,4 @@ and others useful frameworks, like React Native.
 
 Go to code and don't forget to start the background music :musical_note:
 
-![Viniciuss Stats](https://github-readme-stats.vercel.app/api?username=vinicius-gandini&show_icons=true&theme=radical)
+![Viniciuss Stats](https://github-readme-stats.vercel.app/api?username=vinicius-gandini&show_icons=true&theme=tokyonight)
