@@ -1,22 +1,20 @@
 name: GitHub-Profile-Summary-Cards
-
 on:
   create:
-  schedule: # execute every 24 hours
-    - cron: "* */24 * * *"
+  schedule: # executa a cada 24 horas
+    - cron: "0 0 * * *"       
   workflow_dispatch:
 
 jobs:
-build:
-  runs-on: ubuntu-latest
-  name: generate-github-cards
-  permissions:
-    contents: write
-
-  steps:
-    - uses: actions/checkout@v2
-    - uses: vn7n24fzkq/github-profile-summary-cards@release
-      env:
-        GITHUB_TOKEN: ${{ secrets.[YOUR_SECRET_TOKEN_NAME] }}
-      with:
-        USERNAME: ${{ github.repository_owner }}
+  build:                      
+    runs-on: ubuntu-latest
+    name: generate-github-cards
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v2
+      - uses: vn7n24fzkq/github-profile-summary-cards@release
+        env:
+          GITHUB_TOKEN: ${{ secrets.SUMMARY_CARD_TOKEN }}   # ✅ Erro 3 corrigido
+        with:
+          USERNAME: ${{ github.repository_owner }}
